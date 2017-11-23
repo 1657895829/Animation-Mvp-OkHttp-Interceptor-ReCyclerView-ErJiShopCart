@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:id="@+id/relative01">
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/thirdBackImage"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/icon_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:padding="10dp"
+            android:text="购物车"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"    />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/third_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/third_pay_linear"
+        android:layout_below="@+id/relative01" />
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:id="@+id/third_pay_linear"
+        >
+
+        <CheckBox
+            android:drawablePadding="@dimen/padding_5dp"
+            android:id="@+id/third_allselect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选/反选"
+            />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/third_totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingRight="18dp"
+                android:text="总价：￥ 0"
+                android:textColor="@color/main_red_text"
+                android:textSize="@dimen/common_font_size_16"
+                />
+        </RelativeLayout>
+
+</RelativeLayout>
